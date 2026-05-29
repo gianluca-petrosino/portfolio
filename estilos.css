@@ -1,0 +1,267 @@
+@font-face {
+    font-family: "Fira Sans Reg";
+    src: url(fuentes/FiraSans-Regular.ttf) format(truetype);
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Fira Sans Bold";
+    src: url(fuentes/FiraSans-Bold.ttf) format(truetype);
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Fira Sans Italic";
+    src: url(fuentes/FiraSans-Italic.ttf) format(truetype);
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Display italic";
+    src: url(fuentes/PlayfairDisplay-Italic-VariableFont_wght.ttf) format(truetype);
+    font-weight: bold;
+    font-style: italic
+}
+
+@font-face {
+    font-family: "Display reg";
+    src: url(fuentes/PlayfairDisplay-VariableFont_wght.ttf) format(truetype);
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+* {
+    font-family: "Fira Sans Reg", serif;
+    font-size: 1rem;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-family: "Display reg", serif;
+
+    font-size: 4rem;
+}
+
+h2 {
+    font-family: "Display italic", serif;
+
+    font-size: 2rem;
+    margin-bottom: 40px
+}
+
+p {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+}
+
+
+body {
+    background-color: rgb(25, 2, 66);
+}
+
+
+
+nav {
+    background-color: black;
+    padding: 10px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    margin-left: auto;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+.hero {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 50px;
+}
+
+.hero-img img {
+    display: block;
+}
+
+.hero-texto {
+    max-width: 500px;
+    margin-right: 50px;
+}
+
+footer {
+    background-color: black;
+    text-align: center;
+    padding: 10px;
+
+}
+
+footer p {
+    color: white;
+    font-size: 10px;
+}
+
+.boton {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 25px;
+    border: 1px solid white;
+    border-radius: 5px;
+    color: white;
+    text-decoration: none;
+
+}
+
+.boton:hover {
+    background-color: white;
+
+
+}
+
+/* hasta aca es index*/
+
+.trabajos {
+    padding: 50px;
+}
+
+
+.titulo-trabajos {
+    color: white;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+
+.contenedor-trabajos {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.card {
+
+    background-color: black;
+    padding: 15px;
+    border-radius: 20px;
+    width: 180px;
+
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+
+.card img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    display: block;
+}
+
+
+.card h3 {
+    color: white;
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+}
+
+
+.card p {
+    color: white;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.card video {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    display: block;
+
+}
+
+.contacto-final {
+    background-color: white;
+    text-align: center;
+    padding: 25px;
+}
+
+.trabajemos {
+    background-color: black;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.trabajemos:hover {
+    background-color:  rgb(25, 2, 66);
+
+}
+
+/*intento responsive*/
+
+@media (max-width: 500px) {
+
+    nav {
+        display: flex;
+        justify-content: center;
+    }
+
+    ul {
+        display: flex;
+        gap: 10px;
+        padding: 0;
+        margin: 0;
+    }
+
+    .hero {
+
+        flex-direction: column;
+ text-align: center;
+    }
+
+    .hero-img img {
+        padding: 20px 0px 0px 0px;
+        width: 100%;
+    }
+
+    .hero-texto {
+        margin-right: 0;
+    }
+
+    .contenedor-trabajos {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 80%;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1rem;
+    }
+
+}
