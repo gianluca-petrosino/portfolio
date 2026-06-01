@@ -39,17 +39,16 @@
     font-size: 1rem;
     margin: 0;
     padding: 0;
+    color: white;
 }
 
 h1 {
     font-family: "Display reg", serif;
-
     font-size: 4rem;
 }
 
 h2 {
     font-family: "Display italic", serif;
-
     font-size: 2rem;
     margin-bottom: 40px
 }
@@ -62,9 +61,14 @@ p {
 
 body {
     background-color: rgb(25, 2, 66);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
-
+main {
+    flex: 1;
+}
 
 nav {
     background-color: black;
@@ -75,7 +79,6 @@ nav {
 }
 
 
-
 ul {
     display: flex;
     gap: 20px;
@@ -84,7 +87,6 @@ ul {
 }
 
 a {
-    color: white;
     text-decoration: none;
 }
 
@@ -93,7 +95,7 @@ a {
     flex-direction: row-reverse;
     align-items: center;
     justify-content: space-between;
-    padding-right: 50px;
+    padding-right: 80px;
 }
 
 .hero-img img {
@@ -101,20 +103,18 @@ a {
 }
 
 .hero-texto {
-    max-width: 500px;
-    margin-right: 50px;
+    max-width: 550px;
+    margin-right: 80px;
 }
 
 footer {
     background-color: black;
     text-align: center;
-    padding: 10px;
-
+    padding: 20px;
 }
 
 footer p {
-    color: white;
-    font-size: 10px;
+    font-size: 0.8rem;
 }
 
 .boton {
@@ -123,15 +123,12 @@ footer p {
     padding: 10px 25px;
     border: 1px solid white;
     border-radius: 5px;
-    color: white;
     text-decoration: none;
 
 }
 
 .boton:hover {
     background-color: white;
-
-
 }
 
 /* hasta aca es index*/
@@ -142,7 +139,6 @@ footer p {
 
 
 .titulo-trabajos {
-    color: white;
     margin-bottom: 50px;
     text-align: center;
 }
@@ -150,70 +146,97 @@ footer p {
 
 .contenedor-trabajos {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
 }
 
-
 .card {
-
     background-color: black;
     padding: 15px;
     border-radius: 20px;
     width: 180px;
-
 }
 
 .card:hover {
     transform: translateY(-10px);
 }
 
-
-.card img {
-    width: 100%;
-    border-radius: 10px;
-    margin-bottom: 20px;
-    display: block;
-}
-
-
 .card h3 {
-    color: white;
     margin-bottom: 10px;
     font-size: 1.5rem;
+    padding: 10px 0px;
 }
 
 
 .card p {
-    color: white;
     font-size: 1rem;
-    line-height: 1.5;
 }
 
+.card img,
 .card video {
     width: 100%;
-    border-radius: 10px;
-    margin-bottom: 20px;
+    height: auto;
     display: block;
-
 }
 
-.contacto-final {
-    background-color: white;
+
+.formulario {
     text-align: center;
-    padding: 25px;
+    padding: 20px 50px 50px 50px;
 }
 
-.trabajemos {
-    background-color: black;
-    color: white;
-    padding: 15px 30px;
-    border-radius: 5px;
-    text-decoration: none;
+.formulario form {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    margin: auto;
+    gap: 10px;
 }
 
-.trabajemos:hover {
-    background-color:  rgb(25, 2, 66);
+.formulario input,
+.formulario textarea {
+    padding: 10px;
+}
 
+.formulario button {
+    padding: 10px;
+    cursor: pointer;
+}
+
+
+.detalle-proyecto {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    padding: 80px;
+}
+
+.detalle-proyecto img,
+.detalle-proyecto video {
+    max-width: 500px;
+    width: auto;
+    height: auto;
+}
+
+.texto-proyecto {
+    max-width: 500px;
+}
+
+.texto-proyecto h1 {
+    margin-bottom: 20px;
+}
+
+.texto-proyecto h2 {
+    margin-bottom: 20px;
+}
+
+.volver {
+    position: fixed;
+    left: 30px;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 /*intento responsive*/
@@ -230,22 +253,29 @@ footer p {
         gap: 10px;
         padding: 0;
         margin: 0;
+        flex-wrap: wrap;
+        justify-content: center;
     }
 
     .hero {
-
         flex-direction: column;
- text-align: center;
+        text-align: center;
+        padding-right: 0;
     }
 
     .hero-img img {
+        display: flex;
         padding: 20px 0px 0px 0px;
         width: 100%;
+        height: auto;
     }
 
     .hero-texto {
         margin-right: 0;
+        max-width: 100%;
+        padding: 20px;
     }
+
 
     .contenedor-trabajos {
         flex-direction: column;
@@ -256,6 +286,11 @@ footer p {
         width: 80%;
     }
 
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
     h1 {
         font-size: 2rem;
     }
@@ -263,5 +298,30 @@ footer p {
     h2 {
         font-size: 1rem;
     }
+
+    .detalle-proyecto {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .detalle-proyecto img,
+    .detalle-proyecto video {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+    }
+
+
+    .texto-proyecto {
+        max-width: 100%;
+    }
+
+    .volver {
+        position: static;
+        transform: none;
+        display: block;
+        margin: 20px 0 0 20px;
+    }
+
 
 }

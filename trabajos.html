@@ -5,7 +5,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="estilos.css">
-    <link rel="stylesheet" href="Jscss/jquery.fancybox.min.css">
 
     <title>Mis trabajos</title>
 </head>
@@ -22,94 +21,71 @@
                 <li><a href="#">Sobre mi</a></li>
                 <li><a href="#">Contacto</a></li>
             </ul>
-
         </nav>
-
     </header>
-
     <main>
 
         <section class="trabajos">
-
             <div class="titulo-trabajos">
-
                 <h1>
                     Mis trabajos
                 </h1>
-
                 <h2>
                     Proyectos de diseño visual, branding y contenido digital
                 </h2>
-
             </div>
-
-
 
             <div class="contenedor-trabajos">
 
                 <article class="card">
-
-                    <video controls>
-
-                        <source src="img/texturasmultimedia.mp4" type="video/mp4">
-
-                    </video>
+                    <a href="texturasmultimedia.html">
+                        <video height="255" width="180">
+                            <source src="img/texturasmultimedia3.mp4" type="video/mp4">
+                        </video>
+                    </a>
                     <h3>Proyecto 1</h3>
-
                     <p>
                         Experimentacion de las distintas texturas
                     </p>
-
                 </article>
 
                 <article class="card">
-
-                    <a data-fancybox="galeria" href="img/propuestatc.jpg">
-                        <img src="img/propuestatc.jpg" alt="trabajo 2">
+                    <a href="propuestatc.html">
+                        <img src="img/propuestatc2.jpg" alt="trabajo 2" height="255px" width="180px">
                     </a>
-
                     <h3>Proyecto 2</h3>
-
                     <p>
                         Rediseño de identidad visual del teatro coliseo.
                     </p>
-
                 </article>
 
                 <article class="card">
-
-                    <a data-fancybox="galeria" href="img/menuhelado.jpg">
-                        <img src="img/menuhelado.jpg" alt="trabajo 3">
+                    <a href="menuhelado.html">
+                        <img src="img/menuhelado2.jpg" alt="trabajo 3" height="255px" width="180px">
                     </a>
-
                     <h3>Proyecto 3</h3>
-
                     <p>
                         Diseño portada de menu de heladeria.
                     </p>
-
                 </article>
 
 
                 <article class="card">
 
-                    <a data-fancybox="galeria" href="img/mallatp.jpg">
-                        <img src="img/mallatp.jpg" alt="trabajo 4">
+                    <a href="malla.html">
+                        <img src="img/mallatp2.jpg" alt="trabajo 4" height="255px" width="180px">
                     </a>
-
                     <h3>Proyecto 4</h3>
-
                     <p>
                         Memoria descriptiva de proyecto Malla.
                     </p>
-
                 </article>
 
 
                 <article class="card">
 
-                    <a data-fancybox="galeria" href="img/ilustracionexperimental.jpeg">
-                        <img src="img/ilustracionexperimental.jpeg" alt="trabajo 5">
+                    <a href="ilustracionexperimental.html">
+                        <img src="img/ilustracionexperimental2.jpeg" alt="trabajo 5"  height="255px" width="180px">
                     </a>
 
                     <h3>Proyecto 5</h3>
@@ -124,11 +100,23 @@
 
         </section>
 
-        <section class="contacto-final">
+        <section class="formulario">
 
-            <a href="index.html"" class="trabajemos">
-                ¡Trabajemos juntxs!
-            </a>
+            <h2>¡Trabajemos juntxs!</h2>
+
+            <form>
+
+                <input type="text" placeholder="Nombre y Apellido">
+
+                <input type="email" placeholder="Mail">
+
+                <textarea placeholder="Mensaje"></textarea>
+
+                <button type="submit">
+                    Enviar
+                </button>
+
+            </form>
 
         </section>
 
@@ -142,10 +130,6 @@
         </p>
 
     </footer>
-
-    <script src="Jscss/jquery-3.7.1.min.js"></script>
-    <script src="Jscss/jquery.fancybox.min.js"></script>
-
 </body>
 
 </html>
