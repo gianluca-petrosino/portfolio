@@ -124,7 +124,6 @@ footer p {
     border: 1px solid white;
     border-radius: 5px;
     text-decoration: none;
-
 }
 
 .boton:hover {
@@ -202,6 +201,7 @@ footer p {
 .formulario button {
     padding: 10px;
     cursor: pointer;
+    color: black;
 }
 
 
@@ -322,6 +322,5 @@ footer p {
         display: block;
         margin: 20px 0 0 20px;
     }
-
 
 }
